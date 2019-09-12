@@ -4,6 +4,7 @@
     <div class="main-container">
       <beers-list :beers="beers"></beers-list>
       <beer-detail :beer="selectedBeer"></beer-detail>
+      <fav-beers :favBeers="favBeers"></fav-beers>
       </div>
     </div>
   </template>
@@ -12,18 +13,21 @@
   import {eventBus} from './main.js'
   import BeerDetail from './components/BeerDetail.vue'
   import BeersList from './components/BeersList.vue'
+  import FavBeers from './components/FavBeers.vue'
 
 
   export default {
     data(){
       return {
         beers:[],
-        selectedBeer: null
+        selectedBeer: null,
+        favBeers: []
       }
     },
     components: {
       "beers-list": BeersList,
-      "beer-detail": BeerDetail
+      "beer-detail": BeerDetail,
+      "fav-beers": FavBeers
     },
     mounted(){
       fetch('https://api.punkapi.com/v2/beers')

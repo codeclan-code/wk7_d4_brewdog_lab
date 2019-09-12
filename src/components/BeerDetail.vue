@@ -1,7 +1,10 @@
 <template lang="html">
   <article v-if="beer">
-    <p><span>Beer Details</span>: {{ beer.name }}</p>
-    <p><span>Food Pairing</span>:</p>
+    <div>
+      <button v-on:click="saveToFav">Add to Favourites</button>
+    </div>
+    <h1><span><strong>Beer Details</strong></span>: {{ beer.name }} </h1>
+    <p><span><strong>Food Pairing</strong></span>:</p>
     <ol>
       <li>{{ beer.food_pairing[0] }}</li>
       <li>{{ beer.food_pairing[1] }}</li>
@@ -12,9 +15,16 @@
 </template>
 
 <script>
+import { eventBus } from '../main.js'
 export default {
   name: 'beer-detail',
-  props: ['beer']
+  props: ['beer'],
+  methods: {
+    saveToFav(){
+      eventBus.$emit('beer-selected', this.beer);
+      favBeers.push(this.selectedBeer)
+    }
+  }
 }
 </script>
 
