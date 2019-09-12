@@ -1,7 +1,9 @@
 <template lang="html">
-  <ul>
-    <li v-for="beer in favBeers" :beer="favBeers">{{ beer.name }}</li>
-  </ul>
+  <div>
+    <ul>
+      <li v-for="beer in favBeers" :beer="favBeers">{{ beer.name }}</li>
+    </ul>
+  </div>
 </template>
 
 <script>

@@ -37,6 +37,9 @@
       eventBus.$on('beer-selected', (beer) => {
         this.selectedBeer = beer
       })
+      eventBus.$on('beer-favourited', (favouritedBeer) => {
+        this.favBeers.push(favouritedBeer);
+      })
     }
   }
   </script>

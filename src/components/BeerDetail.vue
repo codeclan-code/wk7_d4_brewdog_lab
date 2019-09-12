@@ -1,8 +1,6 @@
 <template lang="html">
   <article v-if="beer">
-    <div>
-      <button v-on:click="saveToFav">Add to Favourites</button>
-    </div>
+    <button v-on:click="saveToFav">Add to Favourites</button>
     <h1><span><strong>Beer Details</strong></span>: {{ beer.name }} </h1>
     <p><span><strong>Food Pairing</strong></span>:</p>
     <ol>
@@ -21,8 +19,7 @@ export default {
   props: ['beer'],
   methods: {
     saveToFav(){
-      eventBus.$emit('beer-selected', this.beer);
-      favBeers.push(this.selectedBeer)
+      eventBus.$emit('beer-favourited', this.beer);
     }
   }
 }
