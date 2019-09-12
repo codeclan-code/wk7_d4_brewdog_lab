@@ -45,10 +45,15 @@
   </script>
 
   <style lang="css" scoped>
+
+    h1 {
+      font-family: sans-serif;
+    }
+
     .main-container {
       display: flex;
       justify-content: space-between;
-      font-family: sans-serif;;
+      font-family: sans-serif;
     }
 
     article {
