@@ -38,4 +38,19 @@
   </script>
 
   <style lang="css" scoped>
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      font-family: sans-serif;;
+    }
+
+    article {
+      border: 2px dashed navy;
+      width: 300px;
+      height: auto;
+      padding: 10px;
+      margin-right:50px;
+      font-weight: normal;
+      border-radius: 10px;
+    }
   </style>
