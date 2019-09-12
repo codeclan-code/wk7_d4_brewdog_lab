@@ -56,7 +56,7 @@
       width: 300px;
       height: auto;
       padding: 10px;
-      margin-right:50px;
+      margin-right:20px;
       font-weight: normal;
       border-radius: 10px;
     }

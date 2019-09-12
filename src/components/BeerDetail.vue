@@ -26,6 +26,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
+button {
 
+  color:white;
+  background-color: orange;
+  border-radius: 20px;
+  font-size: 100%;
+}
 
 </style>

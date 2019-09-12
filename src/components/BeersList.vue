@@ -1,8 +1,8 @@
 <template lang="html">
 <div id ="beersList">
-  <ul>
+  <ol>
     <list-component v-for="(beer, index) in beers" :beer="beer" :key="index"></list-component>
-  </ul>
+  </ol>
 </div>
 </template>
 
