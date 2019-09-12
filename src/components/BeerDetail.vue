@@ -1,8 +1,7 @@
 <template lang="html">
-<article>
-  <p><span>Beer Name</span>: {{beer.name}}</p>
+  <article v-if="beer">
+  <p><span>Beer Name</span>: {{ beer.name }}</p>
 </article>
-</div>
 </template>
 
 <script>

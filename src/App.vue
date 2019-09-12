@@ -5,15 +5,14 @@
       <beers-list :beers="beers"></beers-list>
       <beer-detail :beer="selectedBeer"></beer-detail>
       </div>
-
     </div>
-
   </template>
 
   <script>
   import {eventBus} from './main.js'
   import BeerDetail from './components/BeerDetail.vue'
   import BeersList from './components/BeersList.vue'
+
 
   export default {
     data(){
@@ -34,7 +33,6 @@
       eventBus.$on('beer-selected', (beer) => {
         this.selectedBeer = beer
       })
-
     }
   }
   </script>
